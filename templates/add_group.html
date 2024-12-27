@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Añadir Nuevo Grupo</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="group_name">Nombre del Grupo</label>
+            <input type="text" class="form-control" id="group_name" name="group_name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Añadir Grupo</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
