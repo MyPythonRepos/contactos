@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Añadir Nuevo Contacto</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="group">Seleccionar Grupo</label>
+            <select class="form-control" id="group" name="group" required>
+                {% for group in groups %}
+                    <option value="{{ group }}">{{ group }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contact_name">Nombre del Contacto</label>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" required>
+        </div>
+        <div class="form-group">
+            <label for="contact_email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="contact_email" name="contact_email" required>
+        </div>
+        <button type="submit" class="btn btn-success">Añadir Contacto</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

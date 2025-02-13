@@ -1,0 +1,3 @@
+Publicar la aplicación con NGINX
+https://flask-es.readthedocs.io/deploying/
+https://www.techsyncer.com/es/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04.html
